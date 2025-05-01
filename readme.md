@@ -249,6 +249,6 @@ Now, let's set up a ROS 2 workspace to use the `px4_ros_com` package, which prov
 ## Next Steps
 
 **Offical pages for refference of the above:**
-*1) Toolchain setup : https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
-*2) gazebo simulation :https://docs.px4.io/main/en/sim_gazebo_gz/
-*3) Ros2 user guide by PX4 :https://docs.px4.io/main/en/ros2/user_guide.html#humble
+* **1) Toolchain setup :** https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html .
+* **2) gazebo simulation :**https://docs.px4.io/main/en/sim_gazebo_gz/ .
+* **3) Ros2 user guide by PX4 :**https://docs.px4.io/main/en/ros2/user_guide.html#humble .
