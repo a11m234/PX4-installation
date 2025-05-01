@@ -169,7 +169,7 @@ To allow communication between PX4 SITL and ROS 2, you need to run the Micro XRC
     cd PX4-Autopilot/
     make px4_sitl gz_x500
     ```
-2. ** OPEN a new terminal :** and run this
+2. **Open a new terminal:** and run this
     ```bash  
     MicroXRCEAgent udp4 -p 8888
     ```
