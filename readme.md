@@ -248,12 +248,7 @@ Now, let's set up a ROS 2 workspace to use the `px4_ros_com` package, which prov
 
 ## Next Steps
 
-You have now installed PX4 and ROS 2 Humble. To integrate them:
-
-1.  Install the `px4_ros_com` package for ROS 2 workspace setup.
-2.  Configure PX4 SITL to connect to the Micro XRCE-DDS Agent (usually enabled by default for UDP on port 8888).
-3.  Launch PX4 SITL (e.g., `make px4_sitl gazebo-classic_x500`).
-4.  Run the Micro XRCE-DDS Agent in a separate terminal (`MicroXRCEAgent udp4 -p 8888`).
-5.  Run your ROS 2 nodes that subscribe to or publish topics related to PX4 (e.g., sensor data, vehicle commands).
-
-Refer to the official PX4 documentation on ROS 2 integration for more detailed examples and configurations.
+Offical pages for refference of the above:
+Toolchain setup : https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
+gazebo simulation :https://docs.px4.io/main/en/sim_gazebo_gz/
+Ros2 user guide by PX4 :https://docs.px4.io/main/en/ros2/user_guide.html#humble
