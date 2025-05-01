@@ -39,12 +39,12 @@ We will clone the PX4 source code from GitHub and run the official setup script 
 
 1.  **Navigate to Home Directory:** Open a new terminal after rebooting.
     ```bash
-    cd ~
+    cd 
     ```
-    *( `~` is a shortcut for your home directory)*
+    
 2.  **Clone the PX4 Repository:** This command downloads the PX4 source code and its submodules.
     ```bash
-    git clone [https://github.com/PX4/PX4-Autopilot.git](https://github.com/PX4/PX4-Autopilot.git) --recursive
+    git clone https://github.com/PX4/PX4-Autopilot.git --recursive
     ```
     * `--recursive` is crucial to download necessary submodules. This might take some time.*
 3.  **Run the Ubuntu Setup Script:** This script installs all required dependencies for building and simulating PX4.
@@ -52,7 +52,6 @@ We will clone the PX4 source code from GitHub and run the official setup script 
     bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
     ```
     * *You might be prompted for your password multiple times.*
-    * *Accept any license agreements if prompted (e.g., for Fast-RTPS).*
 4.  **(Required) Restart Your System:** A restart is often necessary for all system changes (like group permissions) to take effect correctly.
     ```bash
     sudo reboot now
