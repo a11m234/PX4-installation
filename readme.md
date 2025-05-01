@@ -141,7 +141,7 @@ The Micro XRCE-DDS Agent acts as a bridge, translating PX4's internal uORB messa
     ```
 2.  **Clone the Agent Repository:** We clone a specific stable branch (`v2.4.2` in this case, check PX4 docs for current recommendations if needed).
     ```bash
-    git clone -b v2.4.2 [https://github.com/eProsima/Micro-XRCE-DDS-Agent.git](https://github.com/eProsima/Micro-XRCE-DDS-Agent.git)
+    git clone -b v2.4.2 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
     ```
 3.  **Build the Agent:**
     ```bash
