@@ -175,6 +175,76 @@ To allow communication between PX4 SITL and ROS 2, you need to run the Micro XRC
     ```
     * This starts the agent listening for UDP connections on port 8888, which is the default configuration for PX4 SITL.
     * You need to keep this terminal open while running the PX4 simulation and ROS 2 nodes that need to communicate with PX4.
+      
+## Step 7: Build and Run PX4-ROS 2 Communication Workspace
+
+Now, let's set up a ROS 2 workspace to use the `px4_ros_com` package, which provides examples and tools for interacting with PX4 via ROS 2.
+
+1.  **Create Workspace Directory:** Open a **new terminal**. Create a directory for your workspace (e.g., `ws_sensor_combined`) including the `src` subdirectory, and navigate into `src`.
+    ```bash
+    mkdir -p ~/ws_sensor_combined/src
+    cd ~/ws_sensor_combined/src
+    ```
+    * *Using a consistent naming convention like `~/ros2_ws/src` or `~/px4_ros_ws/src` can be helpful.*
+2.  **Clone Required Repositories:** Clone the `px4_msgs` (defines the message types) and `px4_ros_com` (provides communication nodes and examples) repositories into the `src` directory.
+    ```bash
+    git clone https://github.com/PX4/px4_msgs.git
+    git clone https://github.com/PX4/px4_ros_com.git
+    ```
+3.  **Build the Workspace:**
+    * Navigate to the root of the workspace (`ws_sensor_combined`).
+        ```bash
+        cd ..
+        ```
+    * Source your ROS 2 Humble installation. This makes ROS 2 build tools available.
+        ```bash
+        source /opt/ros/humble/setup.bash
+        ```
+    * Build the workspace using `colcon`. Colcon is the standard build tool for ROS 2 packages.
+        ```bash
+        colcon build
+        ```
+        * This command finds and builds all ROS 2 packages located in the `src` directory.
+        * It will create `build`, `install`, and `log` directories in your workspace root (`~/ws_sensor_combined`).
+
+4.  **Run the Sensor Combined Listener Example:**
+    * **Ensure Prerequisites are Running:**
+        * PX4 SITL simulation (from Step 3) must be running.
+        * Micro XRCE-DDS Agent (from Step 6) must be running in its own terminal.
+    * **Open a NEW Terminal:** It's best practice to run nodes in a fresh terminal.
+    * **Navigate to Workspace:**
+        ```bash
+        cd ~/ws_sensor_combined/
+        ```
+    * **Source ROS 2 Environment:**
+        ```bash
+        source /opt/ros/humble/setup.bash
+        ```
+    * **Source Local Workspace Setup:** This makes the packages you just built in *this specific workspace* available to ROS 2 commands.
+        ```bash
+        source install/local_setup.bash
+        ```
+    * **Launch the Listener Node:** Use `ros2 launch` to run the example launch file. Launch files can start one or more nodes with specific configurations.
+        ```bash
+        ros2 launch px4_ros_com sensor_combined_listener.launch.py
+        ```
+5.  **Verify Output:** If everything is set up correctly, you should see output similar to this in the terminal where you launched the listener, indicating that the ROS 2 node is receiving sensor data from the PX4 simulation via the Micro XRCE-DDS bridge:
+    ```
+    RECEIVED DATA FROM SENSOR COMBINED
+    ================================
+    ts: 870938190
+    gyro_rad[0]: 0.00341645
+    gyro_rad[1]: 0.00626475
+    gyro_rad[2]: -0.000515705
+    gyro_integral_dt: 4739
+    accelerometer_timestamp_relative: 0
+    accelerometer_m_s2[0]: -0.273381
+    accelerometer_m_s2[1]: 0.0949186
+    accelerometer_m_s2[2]: -9.76044
+    accelerometer_integral_dt: 4739
+    ... (repeating) ...
+    ```
+    * You can stop the listener node by pressing `Ctrl+C` in its terminal.
 
 ## Next Steps
 
