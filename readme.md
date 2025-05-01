@@ -224,7 +224,7 @@ Now, let's set up a ROS 2 workspace to use the `px4_ros_com` package, which prov
         ```bash
         source install/local_setup.bash
         ```
-    * **Launch the Listener Node:** Use `ros2 launch` to run the example launch file. Launch files can start one or more nodes with specific configurations.
+    * **Launch the Listener Node:** Use `ros2 launch` to run the example launch file(befre launching thsi file make sure you are running the px4 sitl). Launch files can start one or more nodes with specific configurations.
         ```bash
         ros2 launch px4_ros_com sensor_combined_listener.launch.py
         ```
