@@ -166,6 +166,11 @@ To allow communication between PX4 SITL and ROS 2, you need to run the Micro XRC
 
 1.  **Start the Agent:** Open a **new terminal** and run:
     ```bash
+    cd PX4-Autopilot/
+    make px4_sitl gz_x500
+    ```
+2. ** OPEN a new terminal :** and run this
+    ```bash  
     MicroXRCEAgent udp4 -p 8888
     ```
     * This starts the agent listening for UDP connections on port 8888, which is the default configuration for PX4 SITL.
