@@ -67,7 +67,7 @@ Let's verify the PX4 installation by building and running a basic Software-In-Th
     ```
 2.  **Build and Run Simulation:** This command compiles the PX4 firmware for SITL and launches the Gazebo simulator with an X500 quadcopter model.
     ```bash
-    make px4_sitl gazebo-classic_x500
+    make px4_sitl gz_x500
     ```
     * *The first build will take a significant amount of time.*
     * *You should see the Gazebo simulator window open with a drone model.*
