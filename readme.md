@@ -5,8 +5,8 @@ This guide details the steps to install the PX4 Autopilot software and ROS 2 Hum
 ## Prerequisites
 
 * **Ubuntu 22.04 LTS:** A fresh installation is recommended.
-    * **Dual Boot:** Generally preferred for better performance, especially for simulations. [Search for Ubuntu 22.04 dual boot tutorials if needed].
-    * **Virtual Machine (e.g., VirtualBox, VMware):** An alternative, but may have performance limitations. Ensure you allocate sufficient resources (CPU cores, RAM, disk space). [Search for Ubuntu 22.04 VirtualBox/VMware installation tutorials if needed].
+    * **Dual Boot:** Generally preferred for better performance, especially for simulations. https://www.youtube.com/watch?v=QKn5U2esuRk.
+    * **Virtual Machine (e.g., VirtualBox, VMware):** An alternative, but may have performance limitations. Ensure you allocate sufficient resources (CPU cores, RAM, disk space). https://www.youtube.com/watch?v=rJ9ysibH768.
 * **Internet Connection:** Required for downloading packages and cloning repositories.
 * **Basic Linux Terminal Knowledge:** Familiarity with navigating directories (`cd`) and running commands.
 
