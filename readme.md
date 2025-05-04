@@ -184,6 +184,7 @@ Now, let's set up a ROS 2 workspace to use the `px4_ros_com` package, which prov
     ```bash
     mkdir -p ~/ws_sensor_combined/src
     cd ~/ws_sensor_combined/src
+    pip install --user setuptools==65.5.1
     ```
     * *Using a consistent naming convention like `~/ros2_ws/src` or `~/px4_ros_ws/src` can be helpful.*
 2.  **Clone Required Repositories:** Clone the `px4_msgs` (defines the message types) and `px4_ros_com` (provides communication nodes and examples) repositories into the `src` directory.
@@ -203,6 +204,7 @@ Now, let's set up a ROS 2 workspace to use the `px4_ros_com` package, which prov
     * Build the workspace using `colcon`. Colcon is the standard build tool for ROS 2 packages.
         ```bash
         colcon build
+        echo "source ~/ws_sensor_combined/install/setup.bash" >> ~/.bashrc
         ```
         * This command finds and builds all ROS 2 packages located in the `src` directory.
         * It will create `build`, `install`, and `log` directories in your workspace root (`~/ws_sensor_combined`).
