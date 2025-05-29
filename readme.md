@@ -106,12 +106,13 @@ Now, we'll install ROS 2 Humble, the recommended ROS 2 version for Ubuntu 22.04.
     ```bash
     sudo apt install software-properties-common -y
     sudo add-apt-repository universe -y
+    sudo apt update && sudo apt install curl -y
     ```
 3.  **Add the ROS 2 Apt Repository:**
     ```bash
-    sudo apt update && sudo apt install curl -y
-    sudo curl -sSL [https://raw.githubusercontent.com/ros/rosdistro/master/ros.key](https://raw.githubusercontent.com/ros/rosdistro/master/ros.key) -o /usr/share/keyrings/ros-archive-keyring.gpg
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] [http://packages.ros.org/ros2/ubuntu](http://packages.ros.org/ros2/ubuntu) $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+    sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | 
+    sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
     ```
 4.  **Update Apt Repositories Again:**
     ```bash
