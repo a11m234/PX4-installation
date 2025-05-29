@@ -81,7 +81,8 @@ Let's verify the PX4 installation by building and running a basic Software-In-Th
     sudo apt install libfuse2 -y
     sudo apt install libxcb-xinerama0 libxkbcommon-x11-0 libxcb-cursor-dev -y
     ```
-    * After installing the requiremnets https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html go to this website and find the QGC.AppImage file and download it /  Download QGC from this link https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage.
+    * After installing the requiremnets https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html go to this website and find the QGC.AppImage file and download it or otherwise
+    * Download QGC from this link https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage.
 
 ## Step 4: Install ROS 2 Humble Hawksbill
 
