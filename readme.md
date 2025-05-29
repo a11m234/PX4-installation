@@ -57,7 +57,7 @@ We will clone the PX4 source code from GitHub and run the official setup script 
     sudo reboot now
     ```
 
-## Step 3: Build and Run PX4 SITL Simulation
+## Step 3: Build and Run PX4 SITL Simulation and QGroundcontrol 
 
 Let's verify the PX4 installation by building and running a basic Software-In-The-Loop (SITL) simulation using Gazebo Garden (the default simulator).
 
@@ -72,6 +72,16 @@ Let's verify the PX4 installation by building and running a basic Software-In-Th
     * *The first build will take a significant amount of time.*
     * *You should see the Gazebo simulator window open with a drone model.*
     * *You can stop the simulation by pressing `Ctrl+C` in the terminal where you ran the `make` command.*
+
+3.  **Install QGROUNDCONTROL:** Install the necessary requirements.
+    ```bash
+    sudo usermod -a -G dialout $USER
+    sudo apt-get remove modemmanager -y
+    sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
+    sudo apt install libfuse2 -y
+    sudo apt install libxcb-xinerama0 libxkbcommon-x11-0 libxcb-cursor-dev -y
+    ```
+    * After installing the requiremnets https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html go to this website and find the QGC.AppImage file and download it /  Download QGC from this link https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage.
 
 ## Step 4: Install ROS 2 Humble Hawksbill
 
