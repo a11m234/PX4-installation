@@ -170,6 +170,15 @@ The Micro XRCE-DDS Agent acts as a bridge, translating PX4's internal uORB messa
     ```bash
     git clone -b v2.4.2 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
     ```
+3. ** There is an error in the Micro XRCE-DDS Agent:**
+   * *You need to modify the line 98 and 99 of CMakeLists.txt so:
+      set(_fastdds_tag 2.12.1)
+   * *To
+    ```bash
+    set(_fastdds_version 2.10)
+    set(_fastdds_tag v2.10.6)
+    ```
+
 3.  **Build the Agent:**
     ```bash
     cd Micro-XRCE-DDS-Agent
