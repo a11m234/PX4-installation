@@ -148,7 +148,16 @@ Now, we'll install ROS 2 Humble, the recommended ROS 2 version for Ubuntu 22.04.
     echo $ROS_DISTRO
     ```
     * *This command should output: `humble`*
-
+11. **Install ROS bridge:**
+     * *To install the bridge for use with ROS 2 "Humble" and Gazebo Harmonic (on Ubuntu 22.04):
+     ```bash
+    sudo apt install ros-humble-ros-gzharmonic
+     ```
+12. **Running ROS bridge Camera:**
+    
+    ```bash
+    ros2 run ros_gz_bridge parameter_bridge /camera@sensor_msgs/msg/Image@gz.msgs.Image
+     ```
 ## Step 5: Install Micro XRCE-DDS Agent
 
 The Micro XRCE-DDS Agent acts as a bridge, translating PX4's internal uORB messages into the DDS messages used by ROS 2.
