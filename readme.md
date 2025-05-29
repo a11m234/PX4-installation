@@ -73,7 +73,8 @@ Let's verify the PX4 installation by building and running a basic Software-In-Th
     * *You should see the Gazebo simulator window open with a drone model.*
     * *You can stop the simulation by pressing `Ctrl+C` in the terminal where you ran the `make` command.*
 
-3.  **Install QGROUNDCONTROL:** Install the necessary requirements.
+3.  **Install QGROUNDCONTROL:**
+    * Install the necessary requirements.
     ```bash
     sudo usermod -a -G dialout $USER
     sudo apt-get remove modemmanager -y
@@ -81,8 +82,13 @@ Let's verify the PX4 installation by building and running a basic Software-In-Th
     sudo apt install libfuse2 -y
     sudo apt install libxcb-xinerama0 libxkbcommon-x11-0 libxcb-cursor-dev -y
     ```
-    * After installing the requiremnets https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html go to this website and find the QGC.AppImage file and download it or otherwise
+    * After installing the requirements https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html go to this website and find the QGC.AppImage file and download it or otherwise
     * Download QGC from this link https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage.
+    * Now go to the folder where it is downloaded and Run below 
+    ```bash
+    chmod +x ./QGroundControl.AppImage
+    ./QGroundControl.AppImage   # (or double click)
+    ```
 
 ## Step 4: Install ROS 2 Humble Hawksbill
 
