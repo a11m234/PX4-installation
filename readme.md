@@ -221,6 +221,10 @@ Now, let's set up a ROS 2 workspace to use the `px4_ros_com` package, which prov
     cd ~/ws_sensor_combined/src
     pip install --user setuptools==65.5.1
     ```
+    **FOR UBUNTU 24.04 use this cmd only**
+    ```bash
+    python3.12 -m pip install --upgrade pip setuptools wheel
+    ```
     * *Using a consistent naming convention like `~/ros2_ws/src` or `~/px4_ros_ws/src` can be helpful.*
 2.  **Clone Required Repositories:** Clone the `px4_msgs` (defines the message types) and `px4_ros_com` (provides communication nodes and examples) repositories into the `src` directory.
     ```bash
